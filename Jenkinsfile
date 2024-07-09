@@ -7,7 +7,7 @@ pipeline{
         stage('build'){
             steps{
                 bat 'echo "Building..."'
-                bat 'echo "${File_Name}"'
+                bat 'echo "$File_Name%"'
             }
         }
         stage('test'){
@@ -21,8 +21,7 @@ pipeline{
             }
         }
     }
-}
-post{
+    post{
     always{
         echo "====++++always++++===="
     }
@@ -32,4 +31,5 @@ post{
     failure{
         echo "====++++only when failed++++===="
     }
+}
 }
