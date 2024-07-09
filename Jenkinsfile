@@ -6,18 +6,18 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                sh 'echo "Building..."'
-                sh 'echo "${File_Name}"'
+                bat 'echo "Building..."'
+                bat 'echo "${File_Name}"'
             }
         }
         stage('test'){
             steps{
-                sh 'echo "Testing...'
+                bat 'echo "Testing...'
             }
         }
         stage('deploy'){
             steps{
-                sh 'echo "Deploying..."'
+                bat 'echo "Deploying..."'
             }
         }
     }
